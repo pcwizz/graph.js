@@ -9,6 +9,7 @@ graph.js is a simple library class for creating graphs. Graphs are for making de
 - [Properties](#properties)
 	- [Edges](#edges)
 	- [Graphs](#graphs)
+- [Todo](#todo)
 - [Licence](#licence)
 - [Further reading](#further-reading)
 
@@ -71,6 +72,34 @@ Ok that's great it has a constructor what do you give me with an edge?
 	- `myGraph.delEdge({v0:"my object", v1:"My object"});`
 - Graph.nextTo (returns an array vertices that can be reached directly)
 	- `myGraph.nextTo("My object");`
+
+## Todo
+
+List of things I consider a requirement before graph.js is usable/useful.
+
+- [ ] Tidy up
+	- [ ] Graph.delEdge
+	- [ ] Graph.delVertex
+	- [ ] Graph.nextTo
+- [ ] Documentation
+	- [ ] Edge.toggleVector
+	- [ ] Edge.swapVector
+	- [ ] Edge.matchEdge
+	- [ ] Graph.clear
+	- [ ] Graph.addVertex
+	- [ ] Graph.delVertex
+	- [ ] Graph.addEdge
+	- [ ] Graph.delEdge
+	- [ ] Graph.nextTo
+- [ ] Add functionality
+	- [ ] Import from adjacency list
+	- [ ] Export to Adjacency list
+	- [ ] Import from adjacency matrix
+	- [ ] Export to adjacency matrix
+	- [ ] Plot path
+- [ ] Testing
+	- [ ] design test.js to test all functionality and conceivable edge cases.
+	- [ ] Make the output more human readable
 
 ## Licence
 
