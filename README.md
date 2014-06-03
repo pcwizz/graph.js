@@ -78,8 +78,8 @@ Ok that's great it has a constructor what do you give me with an edge?
 List of things I consider a requirement before graph.js is usable/useful.
 
 - [ ] Tidy up
-	- [ ] Graph.delEdge
-	- [ ] Graph.delVertex
+	- [x] Graph.delEdge
+	- [x] Graph.delVertex
 	- [ ] Graph.nextTo
 - [ ] Documentation
 	- [ ] Edge.toggleVector

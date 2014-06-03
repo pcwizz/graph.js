@@ -25,7 +25,17 @@ output("What is next to B");
 output(JSON.stringify(myGraph.nextTo("B")));
 output("What is next to C");
 output(JSON.stringify(myGraph.nextTo("C")));
-output("Delete a vertex.")
+output("vertex index A, B, C " + myGraph.getVertexIndexs("A","B","C"));
+output("Delete edges");
+output(JSON.stringify(myGraph.edges));
+var indexs = myGraph.getVertexIndexs("A","B");
+myGraph.delEdge(new Edge(indexs[0],indexs[1], true));
+output(JSON.stringify(myGraph.edges));
+myGraph.delEdge({v0:"A",v1:"C"});
+output(JSON.stringify(myGraph.edges));
+myGraph.delEdge({edgeIndex:0});
+output(JSON.stringify(myGraph.edges));
+output("Delete a vertex.");
 myGraph.delVertex("A");
 output(JSON.stringify(myGraph));
 output("Clear the graph");
