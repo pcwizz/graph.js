@@ -172,26 +172,7 @@ If we where simple dealing with trees then we could use boolean values (saving m
 		stroke:#000;
 	}
 </style>
-
-<svg width="400" height="200">
- 	<!--Create vertices-->
-	<rect x="170" y="0" width="60" height="50"></rect>
-	<text x="180" y="25">Vertex1</text>
-	<rect x="70" y="70" width="60" height="50"></rect>
-	<text x="80" y="95">Vertex2</text>
-	<rect x="270" y="70" width="60" height="50"></rect>
-	<text x="280" y="95">Vertex3</text>
-	<rect x="170" y="140" width="60" height="50"></rect>
-	<text x="180" y="165">Vertex4</text>
-	<!--Create edges-->
-	<line x1="200" x2="100" y1="50" y2="70"></line>
-	<text x="143" y="57">1</text>
-	<line x1="200" x2="300" y1="50" y2="70"></line>
-	<text x="247" y="57">2</text>
-	<line x1="300" x2="200" y1="120" y2="140"></line>
-	<text x="243" y="127">5</text>
-</svg>
-
+![graph1.svg][graph1.svg]
 Yes I did do that in-line svg by hand, I may build the ability to draw them into graph.js in future.
 
 #### Object
