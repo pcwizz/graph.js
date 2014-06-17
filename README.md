@@ -157,6 +157,7 @@ If we where simple dealing with trees then we could use boolean values (saving m
 
 
 #### Graph
+
 <style>
 	rect{
 		stroke: #000;
@@ -191,7 +192,7 @@ If we where simple dealing with trees then we could use boolean values (saving m
 	<text x="243" y="127">5</text>
 </svg>
 
-Yes I did do that in-line svg buy hand, I may build the ability to draw them into graph.js in future.
+Yes I did do that in-line svg by hand, I may build the ability to draw them into graph.js in future.
 
 #### Object
 ```javascript
