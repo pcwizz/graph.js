@@ -3,8 +3,13 @@
 var myGraph = new Graph();
 function output(pV){
 	var zone = document.getElementById('outputZone');
+	pV.toString();
+	var parterns = [[ ',', ',<br>'],[ '{', '{<br>'], [ '[', '[<br>'],[ '}', '<br>}'], [ ']', '<br>]'] ];
+	for (var i = parterns.length - 1; i >= 0; i--) {
+	 	pV = pV.replace(parterns[i][0], parterns[i][1], "g");
+	 }; 
+	
 	zone.innerHTML = zone.innerHTML + pV + "<br>";
-	console.log(pV);
 }
 output("Create object");
 var myGraph = new Graph();
@@ -57,10 +62,10 @@ output(JSON.stringify(myEdges));
 
 for (var i = myEdges.length - 1; i >= 0; i--) {
 	output("");
-	output(i);
+	output(i.toString());
 	output("");
 	for (var j = myEdges.length - 1; j >= 0; j--) {
-		output(j);
+		output(j.toString());
 		output(JSON.stringify(myEdges[i].matchEdge(myEdges[j])));
 	}
 }

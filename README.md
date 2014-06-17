@@ -50,28 +50,58 @@ var myEdge = new myEdge(0,1, true, 0);
 Ok that's great it has a constructor what do you give me with an edge?
 > Well here are some things
 
-- Edge.toggleVector (Does what it says)
-- Edge.swapVector (changes the direction of the edge, by swapping the values of point0 and point1)
-- Edge.matchEdge (See if the instance of Edge is the same as another instance of Edge)
+- Edge.vector
+	- Variable
+	- Boolean if true edge is directional from point0 to point1
+- Edge.toggleVector
+	- Takes no parameters
+	- Not of the current value of Edge.vector
+	- Returns nothing
+- Edge.swapVector
+	- Takes no parameters
+	- Changes direction of edge
+	- Returns nothing
+- Edge.matchEdgePoints
+	- Takes an edge object
+	- Checks if the points of the passed object are the same as the instance in which the method is called
+	- Returns true and false if match or no match respectively
+- Edge.matchEdge
+	- Takes an edge object
+	- Checks for match of all properties of the passed object against the instance in which the method is called
+	- Returns true and false if match or no match respectively
 
 ### Graphs
 
-- Graph.clear (Removes everything from a Graph making it clean)
-	- `myGraph.clear();`
-- Graph.addVertex (pushes an object to Graph.vertices)
-	- `myGraph.addVertex("My object");`
-- Graph.vertices (Array)
-	- `myGraph.vertices.push("My object");`
-- Graph.delVertex (Removes and object and edges connected to it from Graph.vertices)
-	- `myGraph.delVertex("My object");`
-- Graph.addEdge (creates and Edge instance adds it to Graph.edges)
-	- `myGraph.addEdge("my object", "My object", false, 55);`
-- Graph.edges (Array)
-	- `myGraph.edges.push(new Edge("my object", "My object", false, 55));`
-- Graph.delEdge (removes Edge instance from Graph.edges)
-	- `myGraph.delEdge({v0:"my object", v1:"My object"});`
-- Graph.nextTo (returns an array vertices that can be reached directly)
-	- `myGraph.nextTo("My object");`
+- Graph.clear
+	- Takes no parameters
+	- Removes all non method properties from instance
+	- Returns nothing
+- Graph.vertices
+	- Array
+	- Stores the values of vertices
+- Graph.addVertex
+	- Takes an object
+	- Pushes object to Graph.vertices
+	- Returns nothing
+- Graph.delVertex
+	- Takes an object
+	- Removes vertex containing the object and all edges connected to it
+	- Returns nothing
+- Graph.edges
+	- Array
+	- Stores Edge objects
+- Graph.addEdge
+	- Takes 2 values of vertices, a boolean for vector and a weight value
+	- Creates new edge object and pushes it to Graph.edges
+	- Returns nothing
+- Graph.delEdge
+	- Takes an object
+	- If object contains edgeIndex the edge at edgeIndex in Graph.edges is sliced out, if it contains pV0 and pV1 then edges that have the values as point0 and point1 respectively will be removed, else the object is assumed to be and Edge then it will be removed if Edge.matchEdge is true
+	- Returns nothing
+- Graph.nextTo
+	- Takes the value of a vertex
+	- Creates an array of all direct neighbours taking account of vector
+	- Returns created array (values of vertices)
 
 ## Todo
 
@@ -81,16 +111,16 @@ List of things I consider a requirement before graph.js is usable/useful.
 	- [x] Graph.delEdge
 	- [x] Graph.delVertex
 	- [x] Graph.nextTo
-- [ ] Documentation
-	- [ ] Edge.toggleVector
-	- [ ] Edge.swapVector
-	- [ ] Edge.matchEdge
-	- [ ] Graph.clear
-	- [ ] Graph.addVertex
-	- [ ] Graph.delVertex
-	- [ ] Graph.addEdge
-	- [ ] Graph.delEdge
-	- [ ] Graph.nextTo
+- [x] Documentation
+	- [x] Edge.toggleVector
+	- [x] Edge.swapVector
+	- [x] Edge.matchEdge
+	- [x] Graph.clear
+	- [x] Graph.addVertex
+	- [x] Graph.delVertex
+	- [x] Graph.addEdge
+	- [x] Graph.delEdge
+	- [x] Graph.nextTo
 - [ ] Add functionality
 	- [ ] Import from adjacency list
 	- [ ] Export to Adjacency list

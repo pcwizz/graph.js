@@ -116,6 +116,7 @@ Graph.prototype.nextTo = function(pV){
 	var index = this.vertices.indexOf(pV);
 	var nextTo = [];
 	for (var i = this.edges.length - 1; i >= 0; i--) {
+		
 		if(this.edges[i].point0 == index){
 			nextTo.push(this.vertices[this.edges[i].point1]);
 		}else if (this.edges[i].point1 == index && this.edges[i].vector != true) {
