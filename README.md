@@ -10,6 +10,8 @@ graph.js is a simple library class for creating graphs. Graphs are for making de
 	- [Edges](#edges)
 	- [Graphs](#graphs)
 - [Todo](#todo)
+- [Definitions & Specifications](#definitions-specifications)
+	- [Adjacency Matrix](#adjacency-matrix)
 - [Licence](#licence)
 - [Further reading](#further-reading)
 
@@ -130,6 +132,100 @@ List of things I consider a requirement before graph.js is usable/useful.
 - [ ] Testing
 	- [ ] design test.js to test all functionality and conceivable edge cases.
 	- [ ] Make the output more human readable
+
+## Definitions & Specifications 
+
+Here be the design documentation and so forth that aside from being interesting to read, may give you a little more insight into how graph.js works.
+If you are not from a computer science or mathematical background you should probably read this, as you may not have come across such jargon.
+
+### Adjacency Matrix
+
+An adjacency matrix is a common form of representation for graphs, so it is would be fitting to add support for the import and export of graphs in this format.
+The idea is that you have a square table with a list of the vertices in a graph both along the horizontal and vertical, there are then values that create the edges.
+If we where simple dealing with trees then we could use boolean values (saving memory), but as we wish to be able to represent weighted edges the values should be numerical; although graph.js will assume any non null (0) value means there is an edge.
+
+### Example
+
+#### Table
+
+|      .      | Vertex1 | Vertex2 | Vertex3 | Vertex4 |
+|   -------   | ------- | ------- | ------- | ------- |
+| **Vertex1** | 0       | 1       | 2       | 0       |
+| **Vertex2** | 1       | 0       | 0       | 0       |
+| **Vertex3** | 2       | 0       | 0       | 5       |
+| **Vertex4** | 0       | 0       | 5       | 0       |
+
+
+#### Graph
+<style>
+	rect{
+		stroke: #000;
+		fill: #fff;
+	}
+	text{
+		font-size: 12px;
+		font-family: serif;
+		font-weight: normal;
+	}
+	line{
+		stroke:#000;
+	}
+</style>
+
+<svg width="400" height="200">
+ 	<!--Create vertices-->
+	<rect x="170" y="0" width="60" height="50"></rect>
+	<text x="180" y="25">Vertex1</text>
+	<rect x="70" y="70" width="60" height="50"></rect>
+	<text x="80" y="95">Vertex2</text>
+	<rect x="270" y="70" width="60" height="50"></rect>
+	<text x="280" y="95">Vertex3</text>
+	<rect x="170" y="140" width="60" height="50"></rect>
+	<text x="180" y="165">Vertex4</text>
+	<!--Create edges-->
+	<line x1="200" x2="100" y1="50" y2="70"></line>
+	<text x="143" y="57">1</text>
+	<line x1="200" x2="300" y1="50" y2="70"></line>
+	<text x="247" y="57">2</text>
+	<line x1="300" x2="200" y1="120" y2="140"></line>
+	<text x="243" y="127">5</text>
+</svg>
+
+Yes I did do that in-line svg buy hand, I may build the ability to draw them into graph.js in future.
+
+#### Object
+```javascript
+{
+	vertices:
+	[
+		"Vertex1",
+		"Vertex2",
+		"Vertex3",
+		"Vertex4"
+	],
+	edges:
+	[
+		{
+			point0:0,
+			point1:1,
+			vector:false,
+			weight:1
+		},
+		{
+			point0:0,
+			point1:2,
+			vector:false,
+			weight:2
+		},
+		{
+			point0:2,
+			point1:3,
+			vector:false,
+			weight:5
+		}
+	]
+}
+```
 
 ## Licence
 
