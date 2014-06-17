@@ -1,3 +1,18 @@
+<!DOCTYPE svg>
+<style>
+	rect{
+		stroke: #000;
+		fill: #fff;
+	}
+	text{
+		font-size: 12px;
+		font-family: serif;
+		font-weight: normal;
+	}
+	line{
+		stroke:#000;
+	}
+</style>
 <svg width="400" height="200">
  	<!--Create vertices-->
 	<rect x="170" y="0" width="60" height="50"></rect>

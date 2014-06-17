@@ -158,20 +158,6 @@ If we where simple dealing with trees then we could use boolean values (saving m
 
 #### Graph
 
-<style>
-	rect{
-		stroke: #000;
-		fill: #fff;
-	}
-	text{
-		font-size: 12px;
-		font-family: serif;
-		font-weight: normal;
-	}
-	line{
-		stroke:#000;
-	}
-</style>
 
 ![ graph1 ](graph1.svg)
 
