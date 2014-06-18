@@ -158,7 +158,7 @@ If we where simple dealing with trees then we could use boolean values (saving m
 
 #### Graph
 
-![ graph picture ](graph.png?raw=true)
+![ graph picture ](graph1.png?raw=true)
 
 #### Object
 ```javascript
